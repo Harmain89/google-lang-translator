@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --c-surface: 248 250 252;
+  --c-panel: 255 255 255;
+  --c-panel-2: 241 245 249;
+  --c-line: 226 232 240;
+  --c-ink: 15 23 42;
+  --c-ink-2: 51 65 85;
+  --c-ink-3: 100 116 139;
+  --c-accent: 79 70 229;
+  --c-accent-soft: 238 242 255;
+}
+
+.dark {
+  --c-surface: 9 9 11;
+  --c-panel: 24 24 27;
+  --c-panel-2: 32 32 36;
+  --c-line: 39 39 42;
+  --c-ink: 244 244 245;
+  --c-ink-2: 212 212 216;
+  --c-ink-3: 113 113 122;
+  --c-accent: 129 140 248;
+  --c-accent-soft: 32 32 36;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply select-none overflow-hidden bg-surface font-sans text-ink antialiased;
+  }
+
+  textarea,
+  .selectable {
+    @apply select-text;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--c-line));
+    border: 3px solid transparent;
+    border-radius: 8px;
+    background-clip: padding-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--c-ink-3) / 0.55);
+    background-clip: padding-box;
+    border: 3px solid transparent;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::selection {
+    background: rgb(var(--c-accent) / 0.28);
+  }
+}
+
+@layer utilities {
+  .drag-region {
+    -webkit-app-region: drag;
+  }
+
+  .no-drag {
+    -webkit-app-region: no-drag;
+  }
+}
