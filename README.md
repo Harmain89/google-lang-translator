@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/assets/banner.jpg" alt="LingoDesk Banner" width="100%" style="border-radius: 12px;" />
+<img src="docs/assets/banner.gif" alt="LingoDesk Banner" width="100%" style="border-radius: 12px;" />
 
 # LingoDesk
 
